@@ -1,0 +1,200 @@
+body{background-color: #444444; margin:0; padding:0;}
+div{display:inline-block; user-select:none;border:;margin:0px;}
+label{border:;}
+.block1{background-color: #333333;}
+.url{color:#0000FF; text-decoration:underline;}
+.url:hover{cursor:pointer;}
+.emphasizered{color:#660000;}
+.redbackground{background-color:#FF0000 !important;}
+
+.underline{text-decoration:underline;}
+.title{font-size:24px;}
+.center{text-align:center;width:100%;}
+.left{text-align:center;width=100%;}
+.subtitle{font-size:18px;text-align:inherit;}
+.taverntextbox{
+/*width:60.869fr;*/
+width:95%;
+height:50%;
+padding:15px 8px 5px; 
+background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/08/angular-156625_1280.png");
+background-size:cover;
+border:solid; 
+display:block;
+}
+#morestats{font-size:10px;}
+#l1 label:hover{cursor:help;}
+#tab1content{display:inline-block;}
+.lefttab{background-color:#333353; text-align:center;}
+.lefttab label:hover{cursor:pointer;}
+.border{grid-area:a;border:solid;}
+.side-left{grid-area:b;border:solid;text-align:center;}
+.button{text-align:center; background-color:#666666;border:solid;border-width: medium; padding:2px;}
+.button:hover{cursor:pointer;}
+.button:active{border-width:thin;}
+.button.stats{background-color:#666688;font-size:13px;width:70px;}
+#tab1content{display:block;}
+#tab2content{display:block;width:99%;}
+#tab3content{display:block;}
+#tab4content{display:block;}
+#tab5content{display:block;}
+.maintabsgrid{display:grid;}
+.main{grid-area:c;border:solid;margin:0px;}
+.tab1{grid-area:g;border:solid;}
+.tab2{grid-area:h;border:solid;}
+.tab3{grid-area:i;border:solid;}
+.tab4{grid-area:j;border:solid;}
+.tab5{grid-area:k;border:solid;}
+#travelnorth{grid-area:n;}
+#traveleast{grid-area:e;}
+#travelwest{grid-area:w;}
+#travelsouth{grid-area:s;}
+.maingrid{display:grid; padding:none; height:100%; grid-auto-columns:2.1739fr; grid-auto-rows:3.125fr;
+grid-template-areas:
+'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'l l l l f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'m m m m f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'n n n n f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'o o o o f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a';
+/*
+'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'l l l l e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'m m m m e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'n n n n e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'o o o o e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'
+'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a';
+
+'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'l l l l e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'm m m m e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'n n n n e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'o o o o e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k e b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'";*/
+/*'g g e b d c c c c c c c c c c c c c a a a a a'
+'l l e b d c c c c c c c c c c c c c a a a a a'
+'h h e b d c c c c c c c c c c c c c a a a a a'
+'m m e b d c c c c c c c c c c c c c a a a a a'
+'i i e b d c c c c c c c c c c c c c a a a a a'
+'n n e b d c c c c c c c c c c c c c a a a a a'
+'j j e b d c c c c c c c c c c c c c a a a a a'
+'o o e b d c c c c c c c c c c c c c a a a a a'
+'k k e b d c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a'
+'p p e f f c c c c c c c c c c c c c a a a a a';*/
+/*grid-template-columns: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;grid-template-rows: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;grid-template-columns:4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr; grid-template-rows: 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr, 4.347fr;*/
+grid-auto-columns:2.173fr;
+grid-auto-rows:3.125fr;
+/*'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f b b b b a c c c c c c c c c c c c c e'
+'f f f d d d d a c c c c c c c c c c c c c e'
+'f f f d d d d a c c c c c c c c c c c c c e'*/
+/*grid-template-columns: 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px; grid-template-rows: 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px, 10px;
+grid-template-columns: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto; grid-template-rows: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;*/}
+.NESWgrid{display:inline-grid; grid-template-areas:'q n qq' 'w qqqqq e' 'qqq s qqqq'; grid-template-columns:30px 30px 30px; grid-template-rows: 30px 30px 30px;}
+#attackdamagelabel{grid-area:atd;}
+#attackspeedlabel{grid-area:ats;}
+#attackknockbacklabel{grid-area:atk;}
+#movementspeedlabel{grid-area:mvs;}
+#physicalresistlabel{grid-area:arm;}
+#magicresistlabel{grid-area:rem;}
+#knockbackresistlabel{grid-area:rek;}
+#fireresistlabel{grid-area:ref;}
+#waterresistlabel{grid-area:rew;}
+#airresistlabel{grid-area:rea;}
+#earthresistlabel{grid-area:ree;}
+#poisonresistlabel{grid-area:rep;}
+#bleedresistlabel{grid-area:reb;}
+#slowresistlabel{grid-area:res;}
+#debuffresistlabel{grid-area:red;}
+
+#attackdamage{grid-area:atd1;}
+#attackspeed{grid-area:ats1;}
+#attackknockback{grid-area:atk1;}
+#movementspeed{grid-area:mvs1;}
+#physicalresist{grid-area:arm1;}
+#magicresist{grid-area:rem1;}
+#knockbackresist{grid-area:rek1;}
+#fireresist{grid-area:ref1;}
+#waterresist{grid-area:rew1;}
+#airresist{grid-area:rea1;}
+#earthresist{grid-area:ree1;}
+#poisonresist{grid-area:rep1;}
+#bleedresist{grid-area:reb1;}
+#slowresist{grid-area:res1;}
+#debuffresist{grid-area:red1;}
+.stat{text-align:left;border-bottom:solid;border-right:solid;}
+.stat1{border-bottom:solid;}
+.statsgrid{display:grid; border-top:solid;border-right:solid;width:50%; grid-template-areas:
+'atd atd1'
+'ats ats1'
+'atk atk1'
+'mvs mvs1'
+'arm arm1'
+'rem rem1'
+'rek rek1'
+'ref ref1'
+'rew rew1'
+'rea rea1'
+'ree ree1'
+'rep rep1'
+'reb reb1'
+'res res1'
+'red red1';
+}
