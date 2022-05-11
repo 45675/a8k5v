@@ -1,7 +1,564 @@
+<head>
+  <link rel="stylesheet" href="mainstylesheet.css">
+</head>
 <body>
+  <!--
   <audio controls autoplay loop>
     <source src="music/bgmusic.mp3" type="audio/ogg">
-  <embed src="music/bgmusic.mp3" autostart="true" loop="true" hidden="true"> 
-</audio>
-  <h1 align="center" font-color="FF9999">HEY HOES</h1>
+    <embed src="music/bgmusic.mp3" autostart="true" loop="true" hidden="true"> 
+  </audio>
+  -->
+<body>
+<div class="maingrid" id="maingrid">
+  <div class="block1 main">
+    <div id="tab1content">
+      <div id="crossroadscontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Crossroads</div>
+        <div class="bodytext">You are currently in <div class="emphasizered currenttown">Current Town</div>. <div id="townnorth" class="emphasizered">Town North</div> is to the north of you. <div id="towneast"class="emphasizered">Town East</div> is to the east of you. <div id="townwest"class="emphasizered">Town West</div> is to the west of you. <div id="townsouth" class= "emphasizered">Town South</div> is to the south of you. Click the buttons below to travel in that direction.</div>
+        <div class="NESWgrid">
+          <div id="travelnorth" class="button">N</div>
+          <div id="traveleast" class="button">E</div>
+          <div id="travelwest" class="button">W</div>
+          <div id="travelsouth" class="button">S</div>
+        </div>
+      </div>
+      <div id="townsquarecontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Town Square</div><br>
+        <div class="bodytext">You are currently in <div class="emphasizered currenttown">Current Town</div>'s town square. Click the buttons below to travel to different areas in town.<br><br><div class="center">Travel to:</div></div>
+        <div class="button" id="traveltavern">Enter Tavern</div>
+        <div class="button" id="travelgym">Enter The Gym</div>
+        <div class="button" id="travelforest">Enter Forest</div>
+        <div class="button" id="travelprarie">Enter Prarie</div>
+        <div class="button" id="travellake">Go to Lake</div>
+        <div class="button" id="travelbeach">Visit Beach</div>
+        <div class="button redbackground" id="travelcrossroads">Exit To Crossroads</div>
+      </div>
+      <div id="taverncontent" class="hidden">
+        <div class="title">
+          <div class="currenttown">
+            Sample
+          </div> Tavern
+        </div>
+        <br>
+        <div class="bodytext">
+          <div class="emphasizered currenttown">
+            Current Town
+          </div>
+          's locally owned tavern. Wander around and speak to residents and visitors for quests, rewards, and accomplices.
+        </div><br>
+        <div id="taverntalk"class="button">
+          Talk to Someone
+        </div>
+        <div id="taverntalking"class="hidden2">
+          Currently in a conversation
+        </div>
+        <br>
+        <div class="center taverntextbox">
+          <br>
+          <div id="taverntextbox">
+            This is the textbox where you will interact with<br> residents and visitors in this tavern.
+          </div>
+          <br>
+          <br>
+          <div id="lfquestbutton" class="button hidden2">Ask For Quest</div>
+          <div id="lfaccomplicebutton" class="button hidden2">Make a Friend</div>
+          <div id="lflorebutton" class="button hidden2">Create Banter</div>
+          <br>
+          
+          <div id="lfquest"class="hidden">Looking For Quest</div>
+          <div id="lfaccomplice" class="hidden">Looking For an Accomplice</div>
+          <div id="lflore"class="hidden">Looking for Lore</div>
+          <br>
+          <div id="aggressiveoption"class="button hidden3">Aggressive Option </div>
+          <div id="passiveoption"class="button hidden3">Passive Option </div>
+          <br>
+          <div id="assertiveoption"class="button hidden3">Assertive Option </div>
+          <div id="lfback"class="button hidden3">Back</div>
+        </div>
+      </div>
+      <div id="gymcontent" class="hidden">
+        <div class="title">
+          <div class="currenttown">
+            Sample
+          </div> Gym
+        </div><br>
+        <div class="bodytext"></div>
+      </div>
+      <div id="forestcontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Forest</div>
+      </div>
+      <div id="prariecontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Prarie</div>
+      </div>
+      <div id="lakecontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Lake</div>
+      </div>
+      <div id="beachcontent" class="hidden">
+        <div class="title"><div class="currenttown">Sample</div> Beach</div>
+      </div>
+      <div id="traveltownsquare" class="button">Enter <div class="currenttown">Current Town</div></div>
+    </div>
+    <div id="tab2content">
+      <div id="statscontent"class="center">
+      	<div id="name"class="title name">Name</div>
+        <br>
+        <div class="subtitle">
+          Strength: <div id="strength">1</div>
+          Agility: <div id="agility">1</div>
+          Wisdom: <div id="intelligence">1</div>
+        </div>
+        <br>
+        <div id="statshome"class="button stats">Home</div>
+        <div id="statsmain"class="button stats">Main Stats</div>
+        <div id="statsinventory"class="button stats">Inventory</div>
+        <br><br>
+        <div id="mehome">Home</div>
+        <div id="mainstats">
+          <div class="left">
+            <div id="mainstats1"><input type="radio"name="mainstats"id="attack"/><label for="attack"> Attack</label></div>
+            <div id="mainstats2"><input type="radio"name="mainstats"id="movement"/><label for="movement"> Movement</label></div>
+            <div id="mainstats3"><input type="radio"name="mainstats"id="defense"/><label for="defense"> Defense</label></div>
+          </div>
+          <div id="mainstatsgrid"class="statsgrid">
+            <div id="attackdamagelabel"class="stat attack">Attack Damage</div>
+            <div id="attackspeedlabel"class="stat attack">Attack Speed</div>
+            <div id="attackknockbacklabel"class="stat attack">Attack Knockback</div>
+          <div id="movementspeedlabel"class="stat movement">Movement Speed</div>
+          <div id="physicalresistlabel"class="stat resist">Physical Resistance</div>
+          <div id="magicresistlabel"class="stat resist">Magic Resistance</div>
+          <div id="knockbackresistlabel"class="stat resist">Knockback Resistance</div>
+          <div id="fireresistlabel"class="stat resist">Fire Resistance</div>
+          <div id="waterresistlabel"class="stat resist">Water Resistance</div>
+          <div id="airresistlabel"class="stat resist">Air Resistance</div>
+          <div id="earthresistlabel"class="stat resist">Earth Resistance</div>
+          <div id="poisonresistlabel"class="stat resist">Poison Resistance</div>
+          <div id="slowresistlabel"class="stat resist">Slow Resistance</div>
+          <div id="bleedresistlabel"class="stat resist">Bleed Resistance</div>
+          <div id="debuffresistlabel"class="stat resist">Debuff Resistance</div>
+          <!--<div id="label"class="stat">Reaction Time</div>-->
+          <div id="attackdamage"class="stat1 attack">1</div>
+          <div id="attackspeed"class="stat1 attack">1</div>
+          <div id="attackknockback"class="stat1 attack">1</div>
+          <div id="movementspeed"class="stat1 movement">1</div>
+          <div id="physicalresist"class="stat1 resist">1</div>
+          <div id="magicresist"class="stat1 resist">1</div>
+          <div id="knockbackresist"class="stat1 resist">1</div>
+          <div id="fireresist"class="stat1 resist">1</div>
+          <div id="waterresist"class="stat1 resist">1</div>
+          <div id="airresist"class="stat1 resist">1</div>
+          <div id="earthresist"class="stat1 resist">1</div>
+          <div id="poisonresist"class="stat1 resist">1</div>
+          <div id="slowresist"class="stat1 resist">1</div>
+          <div id="bleedresist"class="stat1 resist">1</div>
+          <div id="debuffresist"class="stat1 resist">1</div>
+        </div>
+        </div>
+        <div id="inventory">
+          <div id="inventoryequippedgrid"class="inventoryequippedgrid">
+            <div class="grid-item1" id="inventory-top"><label for="top-toggle">Top</label></div>
+          <div class="grid-item1" id="inventory-eyes"><label for="eyes-toggle">Eyes</label></div>
+          <div class="grid-item1" id="inventory-mouth"><label for="mouth-toggle">Mouth</label></div>
+          <div class="grid-item1" id="inventory-neck"><label for="neck-toggle">Neck</label></div>
+          <div class="grid-item1" id="inventory-chest"><label for="chest-toggle">Chest</label></div>
+          <div class="grid-item1" id="inventory-back"><label for="back-toggle">Back</label></div>
+          <div class="grid-item1" id="inventory-wrist"><label for="wrist-toggle">Wrist</label></div>
+          <div class="grid-item1" id="inventory-hands"><label for="hands-toggle">Hands</label></div>
+          <div class="grid-item1" id="inventory-fingers"><label for="fingers-toggle">Fingers</label></div>
+          <div class="grid-item1" id="inventory-legs"><label for="legs-toggle">Legs</label></div>
+          <div class="grid-item1" id="inventory-feet"><label for="feet-toggle">Feet</label></div>
+          <div class="grid-item1" id="inventory-weight"><label for="weight-toggle">Weight</label></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--
+        <div class="title center">
+          |<div id="name">Name</div>|<br>
+          +<div id="namedashes">----</div>+
+        </div>
+        <div class="subtitle center">
+          Strength:<div id="strength">1</div>
+          Agility:<div id="agility">1</div>
+        </div>
+      </div>-->
+      <!--<div id="morestrength"class="button">-->
+    <div id="tab3content">Tab 3</div>
+    <div id="tab4content">Tab 4</div>
+    <div id="tab5content">
+    <div id="lesshunger"class="button">-10 hunger</div>
+    <div id="lessthirst"class="button">-10 thirst</div>
+    <div id="lessenergy"class="button">-10 energy</div>
+    <br>
+    <div id="morehunger"class="button">Eat</div>
+    <div id="morethirst"class="button">Drink</div>
+    <div id="moreenergy"class="button">Sleep</div>
+    </div>
+    
+  </div>
+  <div class="block1 side-left">
+    <div id="l1"class="name"><label>Name</label></div><br>
+    <div><div id="energy">100</div>/<div id="maxenergy">100</div></div><br>
+    <label>Health</label><br>
+    <div id="health">100</div><br>
+    <label>Warmth<br></label>
+    <div id="warmth">50<br></div>
+    <label>Stamina<br></label>
+    <div id="stamina">100<br></div>
+    <label class="hidden1">Thirst</label>
+    <div id="thirst" class="hidden1">100</div>
+    <label class="hidden1">Hunger</label>
+    <div id="hunger" class="hidden1">100</div>
+    <label class="hidden1">???<br></label>
+    <div id="wisdom" class="hidden1">???<br></div>
+    <div id="morestats" class="url">More Stats</div>
+    
+  </div>
+  <div class="lefttab tab1"><label id="t1">World</label></div>
+  <div class="lefttab tab2"><label id="t2">Me</label></div>
+  <div class="lefttab tab3"><label id="t3">Tab 3</label></div>
+  <div class="lefttab tab4"><label id="t4">Tab 4</label></div>
+  <div class="lefttab tab5"><label id="t5">Tab 5</label></div>
+</div>
+<script>//Stat Changing(debug)
+
+var hunger = 100;
+var thirst = 100;
+var energy = 100;
+var health = 100;
+var currenttown = 'Newer York';
+a1 = document.getElementsByClassName("hidden");
+for(let a2=0; a2<a1.length; a2++){
+  a1[a2].style.display = 'none';
+}
+a1 = document.getElementsByClassName("hidden1");
+for(let a2=0; a2<a1.length; a2++){
+  a1[a2].style.display = 'none';
+}
+a1 = document.getElementsByClassName("hidden2");
+for(let a2=0; a2<a1.length; a2++){
+  a1[a2].style.display = 'none';
+}
+a1 = document.getElementsByClassName("hidden3");
+for(let a2=0; a2<a1.length; a2++){
+  a1[a2].style.display = 'none';
+}
+document.getElementById("lesshunger").onclick = function(){
+  hunger -= 10;
+  updatepage();
+}
+document.getElementById("lessthirst").onclick = function(){
+  thirst -= 10;
+  updatepage();
+}
+document.getElementById("lessenergy").onclick = function(){
+  energy -= 10;
+  updatepage();
+}
+document.getElementById("morehunger").onclick = function(){
+  hunger += 10;
+  updatepage();
+}
+document.getElementById("morethirst").onclick = function(){
+  thirst += 10;
+  updatepage();
+}
+document.getElementById("moreenergy").onclick = function(){
+  energy += 10;
+  updatepage();
+}
+//HTML Page Functioning
+var name = ' ';
+var morestatstoggle = 1;
+//window.alert("Are you sure?");
+var a1 = 0; var a2 = 0; var a3 = 0; var a4 = 0; var a5 = 0; var a6 = 0; var a7 = 0; var a8 = 0;
+gridlayout1 = "'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'l l l l f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'm m m m f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'n n n n f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'o o o o f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f z z z z z c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'";
+document.getElementById("maingrid").style.gridTemplateAreas = gridlayout1;
+gridlayout2 = "'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'g g g g f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'l l l l f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'h h h h f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'm m m m f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'i i i i f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'n n n n f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'j j j j f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'o o o o f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'k k k k f b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'q q q q q b b b b d c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a' 'p p p p p p p p p p c c c c c c c c c c c c c c c c c c c c c c c c c c a a a a a a a a'";
+document.getElementById("mainstats1").onclick = function(){
+  a1 = document.getElementsByClassName("attack");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  a1 = document.getElementsByClassName("movement");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("resist");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+}
+document.getElementById("mainstats2").onclick = function(){
+  a1 = document.getElementsByClassName("attack");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("movement");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  a1 = document.getElementsByClassName("resist");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+}
+document.getElementById("mainstats3").onclick = function(){
+  a1 = document.getElementsByClassName("attack");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("movement");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("resist");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+}
+document.getElementById("statshome").onclick = function(){
+  document.getElementById("mehome").style.display = "inline-block";
+  document.getElementById("mainstats").style.display = "none";
+  document.getElementById("inventory").style.display = "none";
+}
+document.getElementById("statsmain").onclick = function(){
+  document.getElementById("mehome").style.display = "none";
+  document.getElementById("mainstats").style.display = "grid";
+  document.getElementById("inventory").style.display = "none";
+}
+document.getElementById("statsinventory").onclick = function(){
+  document.getElementById("mehome").style.display = "none";
+  document.getElementById("mainstats").style.display = "none";
+  document.getElementById("inventory").style.display = "inline-block";
+}
+document.getElementById("lfquestbutton").onclick = function(){
+  a1 = document.getElementsByClassName("hidden2");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("hidden3");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  document.getElementById("lfquest").style.display = "inline-block";
+  document.getElementById("taverntalking").style.display = 'inline-block';
+}
+document.getElementById("lfaccomplicebutton").onclick = function(){
+  a1 = document.getElementsByClassName("hidden2");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("hidden3");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  document.getElementById("lfaccomplice").style.display = "inline-block";
+  document.getElementById("taverntalking").style.display = 'inline-block';
+}
+document.getElementById("lflorebutton").onclick = function(){
+  a1 = document.getElementsByClassName("hidden2");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("hidden3");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  document.getElementById("lflore").style.display = "inline-block";
+  document.getElementById("taverntalking").style.display = 'inline-block';
+}
+
+
+document.getElementById("travelcrossroads").onclick = function(){
+  pagetownsquarecontent.style.display = "none";
+  pagecrossroadscontent.style.display = "inline-block";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("traveltownsquare").onclick = function(){
+  pagetownsquarecontent.style.display = "inline-block";
+  pagecrossroadscontent.style.display = "none";
+  pagetaverncontent.style.display = "none";
+  pagegymcontent.style.display = "none";
+  pageforestcontent.style.display = "none";
+  pageprariecontent.style.display = "none";
+  pagelakecontent.style.display = "none";
+  pagebeachcontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "none";
+  updatepage();
+}
+document.getElementById("traveltavern").onclick = function(){
+  pagetaverncontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+  taverntextbox.innerHTML - 'This is the textbox where you will interact with<br> residents and visitors in this tavern.';
+  if(document.getElementsByClassName("hidden2")[0].style.display == "inline-block"){
+    a1 = document.getElementsByClassName("hidden2");
+    for(let a2=0; a2<a1.length; a2++){
+      a1[a2].style.display = 'none';
+    }
+    taverntalkbutton.style.cursor = 'pointer';
+  }
+  if(document.getElementsByClassName("hidden3")[0].style.display == "inline-block"){
+    a1 = document.getElementsByClassName("hidden3");
+    for(let a2=0; a2<a1.length; a2++){
+      a1[a2].style.display = 'none';
+    }
+    taverntalkbutton.style.cursor = 'pointer';
+  }
+  document.getElementById("lfquest").style.display = 'none';
+  document.getElementById("lfaccomplice").style.display = 'none';
+  document.getElementById("lflore").style.display = 'none';
+}
+document.getElementById("travelgym").onclick = function(){
+  pagegymcontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("travelforest").onclick = function(){
+  pageforestcontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("travelprarie").onclick = function(){
+  pageprariecontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("travellake").onclick = function(){
+  pagelakecontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("travelbeach").onclick = function(){
+  pagebeachcontent.style.display = "inline-block";
+  pagetownsquarecontent.style.display = "none";
+  document.getElementById("traveltownsquare").style.display = "inline-block";
+}
+document.getElementById("taverntalk").onclick = function(){
+  if(taverntalkbutton.style.cursor !== 'not-allowed'){
+    let a1 = document.getElementsByClassName("hidden2");
+    for(let a2=0; a2 < a1.length; a2++){
+      a1[a2].style.display = 'inline-block';
+    }
+    taverntalkbutton.style.cursor = 'not-allowed';
+  }
+}
+document.getElementById("lfback").onclick = function(){
+  a1 = document.getElementsByClassName("hidden3");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'none';
+  }
+  a1 = document.getElementsByClassName("hidden2");
+  for(let a2=0; a2<a1.length; a2++){
+    a1[a2].style.display = 'inline-block';
+  }
+  document.getElementById("lfquest").style.display = "none";
+  document.getElementById("lfaccomplice").style.display = "none";
+  document.getElementById("lflore").style.display = "none";
+}
+document.getElementById("l1").onclick = function(){
+  let name = prompt("What would you like your new name to be?", "Name");
+  if (name == null || name == "") {
+    a1 = document.getElementsByClassName("name");
+    for(let a2=0; a2<a1.length; a2++){
+      a1[a2].innerHTML = name
+    }
+} else {
+    a1 = document.getElementsByClassName("name");
+    for(let a2=0; a2<a1.length; a2++){
+      a1[a2].innerHTML = name
+    }
+  }
+}
+document.getElementById("t1").onclick = function(){
+  document.getElementById("tab1content").style.display = "inline-block";
+  document.getElementById("tab2content").style.display = "none";
+  document.getElementById("tab3content").style.display = "none";
+  document.getElementById("tab4content").style.display = "none";
+  document.getElementById("tab5content").style.display = "none";
+}
+document.getElementById("t2").onclick = function(){
+  document.getElementById("tab1content").style.display = "none";
+  document.getElementById("tab2content").style.display = "inline-block";
+  document.getElementById("tab3content").style.display = "none";
+  document.getElementById("tab4content").style.display = "none";
+  document.getElementById("tab5content").style.display = "none";
+  document.getElementById("statshome").click();
+}
+document.getElementById("t3").onclick = function(){
+  document.getElementById("tab1content").style.display = "none";
+  document.getElementById("tab2content").style.display = "none";
+  document.getElementById("tab3content").style.display = "inline-block";
+  document.getElementById("tab4content").style.display = "none";
+  document.getElementById("tab5content").style.display = "none";
+}
+document.getElementById("t4").onclick = function(){
+  document.getElementById("tab1content").style.display = "none";
+  document.getElementById("tab2content").style.display = "none";
+  document.getElementById("tab3content").style.display = "none";
+  document.getElementById("tab4content").style.display = "inline-block";
+  document.getElementById("tab5content").style.display = "none";
+}
+document.getElementById("t5").onclick = function(){
+  document.getElementById("tab1content").style.display = "none";
+  document.getElementById("tab2content").style.display = "none";
+  document.getElementById("tab3content").style.display = "none";
+  document.getElementById("tab4content").style.display = "none";
+  document.getElementById("tab5content").style.display = "inline-block";
+}
+document.getElementById("morestats").onclick = function(){
+  morestatstoggle = morestatstoggle * -1;
+  if(morestatstoggle > 0){
+    document.getElementById("morestats").innerHTML = 'More Stats';
+    let a1 = document.getElementsByClassName("hidden1");
+    for(let a2 = 0; a2 < a1.length; a2++){
+      a1[a2].style.display = "none";
+    }
+    document.getElementById("maingrid").style.gridTemplateAreas = gridlayout1;
+  }
+  if(morestatstoggle < 0){
+    let a1 = document.getElementsByClassName("hidden1");
+    for(let a2 = 0; a2 < a1.length; a2++){
+      a1[a2].style.display = "block";
+    }
+  	document.getElementById("morestats").innerHTML = 'Less Stats';
+    document.getElementById("maingrid").style.gridTemplateAreas = gridlayout2;
+  }
+}
+document.getElementById("t2").click();
+//document.getElementById("traveltownsquare").click();
+//Page Updates
+hungerstat = document.getElementById("hunger");
+energystat = document.getElementById("energy");
+thirststat = document.getElementById("thirst");
+currenttownstat = document.getElementsByClassName("currenttown");
+traveltownsquarebutton = document.getElementById("traveltownsquare");
+taverntalkbutton = document.getElementById("taverntalk");
+lfquestbutton = document.getElementById("lfquestbutton");
+lfaccomplicebutton = document.getElementById("lfaccomplicebutton");
+lflorebutton = document.getElementById("lflorebutton");
+lfbackbutton = document.getElementById("lfback");
+taverntextbox = document.getElementById("taverntextbox");
+pagecrossroadscontent=document.getElementById("crossroadscontent");
+pagetownsquarecontent=document.getElementById("townsquarecontent");
+pagetaverncontent = document.getElementById("taverncontent");
+pagegymcontent = document.getElementById("gymcontent");
+pageforestcontent = document.getElementById("forestcontent");
+pageprariecontent = document.getElementById("prariecontent");
+pagelakecontent = document.getElementById("lakecontent");
+pagebeachcontent = document.getElementById("beachcontent");
+
+function updatepage(){
+  hungerstat.innerHTML = hunger;
+  energystat.innerHTML = energy;
+  thirststat.innerHTML = thirst;
+  for(let a1=0; a1 < currenttownstat.length; a1++){
+    currenttownstat[a1].innerHTML = currenttown;
+  }
+}
+
+</script>
+</body>
 </body>
